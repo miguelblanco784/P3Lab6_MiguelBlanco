@@ -1,14 +1,17 @@
 #include "Liga.cpp"
+#include "admEquipo.cpp"
 using namespace std;
 
 int main(){
 	while(true){
+		
 		int opcion;
 		cout<<"1- Administrar Ligas\n2- Administrar Equipos\n3- Administrar Jugadores\n4- Jugar Partido\n5- Cargar Archivo\n6- Guardar Archivo\n7- Ver tablas\n";
 		cin>>opcion;
 		switch(opcion){
 			case 1:{
-				
+				admEquipo x;
+				x.leerLiga();
 				break;
 			}//fin case 1
 			case 2:{

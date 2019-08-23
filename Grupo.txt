@@ -1,0 +1,10 @@
+$LigaMX:Mexico
+CruzAzul:1997{Juan|1|Argentina;Jose|17|Mexico;Ivan|7|Uganda}
+America:1916{Angel|1|Mexico;Mario|14|Mexico;Joao|7|Brasil}
+Chivas:1906{Nicky|6|Rusia;David|3|Qatar;Ivan|14|Peru}
+Tigres:1960{Juan|1|Argentina;Jose|17|Mexico;Leyni|7|Uganda}
+$LigaBBVA:Espana
+Celta:1927{Juan|1|Argentina;Jose|17|Mexico;Leyni|7|Uganda}
+Girona:1916{Angel|1|Mexico;Mario|14|Mexico;Joao|7|Brasil}
+Sevilla:1906{Nicky|6|Rusia;David|3|Qatar;Ivan|14|Peru}
+Levante:1960{Juan|1|Argentina;Jose|17|Mexico;Leyni|7|Uganda}

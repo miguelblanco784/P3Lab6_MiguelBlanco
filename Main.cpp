@@ -4,7 +4,7 @@ using namespace std;
 
 int main(){
 	while(true){
-		
+		vector<Liga*> ligas;
 		int opcion;
 		cout<<"1- Administrar Ligas\n2- Administrar Equipos\n3- Administrar Jugadores\n4- Jugar Partido\n5- Cargar Archivo\n6- Guardar Archivo\n7- Ver tablas\n";
 		cin>>opcion;
@@ -35,7 +35,14 @@ int main(){
 				break;
 			}//fin case 6
 			case 7:{
-				
+				for(int i = 0; i < ligas.size(); i++){
+					cout<<setw(5)<<ligas.at(i)->getNombre();
+					for(int j = 0; j < ligas.at(i)->getEquipos().size();j++){
+						cout<<j+1;
+						cout<<setw(5);
+						cout<<ligas.at(i)->getEquipo()->getNombre();
+					}
+				}
 				break;
 			}//fin case 7
 		}	

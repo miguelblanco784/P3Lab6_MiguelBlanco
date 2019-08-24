@@ -55,6 +55,9 @@ class Liga{
 			equipos = x;
 		}
 		
+		void getEquipos(){
+			return equipos;
+		}
 };
 #endif
 

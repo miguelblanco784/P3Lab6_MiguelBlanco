@@ -5,6 +5,7 @@ using namespace std;
 int main(){
 	while(true){
 		vector<Liga*> ligas;
+		
 		int opcion;
 		cout<<"1- Administrar Ligas\n2- Administrar Equipos\n3- Administrar Jugadores\n4- Jugar Partido\n5- Cargar Archivo\n6- Guardar Archivo\n7- Ver tablas\n";
 		cin>>opcion;
@@ -40,7 +41,23 @@ int main(){
 					for(int j = 0; j < ligas.at(i)->getEquipos().size();j++){
 						cout<<j+1;
 						cout<<setw(5);
-						cout<<ligas.at(i)->getEquipo()->getNombre();
+						cout<<ligas.at(i)->getEquipos()->getNombre();
+						cout<<setw(10);
+						cout<<ligas.at(i)->getEquipos()->getPartidosjugados();
+						cout<<setw(5);
+						cout<<ligas.at(i)->getEquipos()->getPartidosganados();
+						cout<<setw(5);
+						cout<<ligas.at(i)->getEquipos()->getPartidosempatados();
+						cout<<setw(5);
+						cout<<ligas.at(i)->getEquipos()->getPartidosperdidos();
+						cout<<setw(5);
+						cout<<ligas.at(i)->getEquipos()->getGolesfavor();
+						cout<<setw(5);
+						cout<<ligas.at(i)->getEquipos()->getGolescontra();
+						cout<<setw(5);
+						cout<<ligas.at(i)->getEquipos()->getDiferenciagoles();
+						cout<<setw(5);
+						cout<<ligas.at(i)->getEquipos()->getPuntos(); 
 					}
 				}
 				break;

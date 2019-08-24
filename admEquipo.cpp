@@ -32,21 +32,17 @@ class admEquipo{
 					contdolar++;
 				}
 			}
-			for(int i = 1; i  < contdolar;i++){
-				for(int j = 0; i < token(archivocompleto,"$",i).size();j++){
-					if(token(archivocompleto,"$",i)[i]=='@'){
-						
+			string temp;
+			for(int i = 1; i<contdolar;i++){
+				temp = token(archivocompleto,"$",i);
+				int contarroba;
+				contarroba = 0;
+				for(int j = 0; j < temp.size();j++){
+					if(temp[j]=='@'){
+						contarroba++;
 					}
 				}
-			}
-			cout<<archivocompleto;
-			for(int i = 1;i<contdolar;i++){
-				cout<<"Linea"<<i;
-				cout<<token(archivocompleto,"$",i)<<endl;
-				token(archivocompleto,"$",i);
-				for(int j = 0; j< 5;j++){
-				}
-				//ligas.push_back(new Liga(token(token(archivocompleto,"$",i),":",1),token(token(archivocompleto,"$",i),":",2),));	
+								
 			}    
 		    Leer.close();
 			return ligas;	

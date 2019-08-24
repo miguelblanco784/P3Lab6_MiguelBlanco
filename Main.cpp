@@ -96,7 +96,7 @@ int main(){
 				break;
 			}//fin case 5
 			case 6:{
-				
+				adm.cargarArchivo(ligas);
 				break;
 			}//fin case 6
 			case 7:{

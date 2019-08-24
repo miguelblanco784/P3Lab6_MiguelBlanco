@@ -14,10 +14,9 @@ class Equipo{
 		Equipo() {
 	    }
 	
-	    Equipo(string nombre, string anofundacion, vector<Jugador*> jugadores) {
+	    Equipo(string nombre, string anofundacion) {
 	        this->nombre = nombre;
 	        this->anofundacion = anofundacion;
-	        this->jugadores = jugadores;
 	    }
 	
 	    string getNombre() {

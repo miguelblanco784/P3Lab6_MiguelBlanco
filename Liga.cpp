@@ -13,10 +13,9 @@ class Liga{
 		Liga() {
 	    }
 	
-	    Liga(string nombre, string pais, vector<Equipo*> equipos) {
+	    Liga(string nombre, string pais) {
 	        this->nombre = nombre;
 	        this->pais = pais;
-	        this->equipos = equipos;
 	    }
 	
 	    string getNombre() {
@@ -55,9 +54,7 @@ class Liga{
 			equipos = x;
 		}
 		
-		void getEquipos(){
-			return equipos;
-		}
+		
 };
 #endif
 

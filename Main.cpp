@@ -11,8 +11,24 @@ int main(){
 		cin>>opcion;
 		switch(opcion){
 			case 1:{
-				admEquipo x;
-				x.leerLiga();
+				system("cls");
+				cout<<"1- Agregar\n2- Eliminar\n";
+				int opcionh;
+				switch(opcionh){
+					case 1:{
+						string nombre, pais;
+						cout<<"Ingrese nombre: ";
+						cin>>nombre;
+						cout<<"Ingrese pais";
+						cin>>pais;
+						ligas.push_back(new Liga(nombre, pais));
+						break;
+					}
+					case 2:{
+						
+						break;
+					}
+				}
 				break;
 			}//fin case 1
 			case 2:{
@@ -36,7 +52,7 @@ int main(){
 				break;
 			}//fin case 6
 			case 7:{
-				for(int i = 0; i < ligas.size(); i++){
+				/*for(int i = 0; i < ligas.size(); i++){
 					cout<<setw(5)<<ligas.at(i)->getNombre();
 					for(int j = 0; j < ligas.at(i)->getEquipos().size();j++){
 						cout<<j+1;
@@ -59,7 +75,7 @@ int main(){
 						cout<<setw(5);
 						cout<<ligas.at(i)->getEquipos()->getPuntos(); 
 					}
-				}
+				}*/
 				break;
 			}//fin case 7
 		}	

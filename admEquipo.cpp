@@ -48,6 +48,26 @@ class admEquipo{
 			return ligas;	
 		}
 		
+		void cargarArchivo(vector<Liga*> ligas){
+			ofstream Escribir;
+        	Escribir.open("./Grupo.t");  
+        	for(int i=0; i<ligas.size();i++){
+        		Escribir<<"$"<<ligas.at(i)->getNombre()<<":"<<ligas.at(i)->getPais()<<endl;
+        		for (int j=0; j<ligas.at(i)->getEquipos().size(); j++){
+        			Escribir<<ligas.at(i)->getEquipos().at(j)->getNombre()<<":"<<ligas.at(i)->getEquipos().at(j)->getAnofundacion()<<"{";
+        			for (int k=0; k<ligas.at(i)->getEquipos().at(j)->getJugadores().size(); k++){
+        				Escribir<<ligas.at(i)->getEquipos().at(j)->getJugadores().at(k)->getNombre()<<"|"<<ligas.at(i)->getEquipos().at(j)->getJugadores().at(k)->getDorsal()<<"|"<<ligas.at(i)->getEquipos().at(j)->getJugadores().at(k)->getPaisorigen();
+        				if (k!= (ligas.at(i)->getEquipos().at(j)->getJugadores().size() -1)){
+        					Escribir<<";";
+        				}else{
+        					Escribir<<"}"<<endl;
+						}
+					}
+				}
+			}             
+          Escribir.close(); 
+		}
+		
 		string token(string cadena, string divisor,int pos){
                if(cadena.size()>0){
                  char oracion[cadena.size()]; 

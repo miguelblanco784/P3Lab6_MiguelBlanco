@@ -5,7 +5,7 @@ using namespace std;
 int main(){
 	while(true){
 		vector<Liga*> ligas;
-		
+		admEquipo adm;
 		int opcion;
 		cout<<"1- Administrar Ligas\n2- Administrar Equipos\n3- Administrar Jugadores\n4- Jugar Partido\n5- Cargar Archivo\n6- Guardar Archivo\n7- Ver tablas\n";
 		cin>>opcion;
@@ -62,8 +62,13 @@ int main(){
 						}
 						case 2:{
 							for(int i = 0; i < ligas.at(opcion2)->getEquipos().size();i++){
+								cout<<i<<"    ";
 								ligas.at(opcion2)->getEquipos().at(i)->getNombre();
 							}
+							int opcion5;
+							cout<<"Ingres el que desea eliminar: ";
+							cin>>opcion5;
+							ligas.at(opcion2)->delEquipo(opcion5);
 							break;
 						}
 					}
@@ -78,6 +83,11 @@ int main(){
 				break;
 			}//fin case 3
 			case 4:{
+				srand(time(0));
+				int equipo=(rand() % 10);
+				for(int i = 0; i < ligas.size();i++){
+					cout<<i<<"   "<<ligas.at(i)->getNombre();
+				}
 				
 				break;
 			}//fin case 4
@@ -90,30 +100,30 @@ int main(){
 				break;
 			}//fin case 6
 			case 7:{
-				/*for(int i = 0; i < ligas.size(); i++){
+				for(int i = 0; i < ligas.size(); i++){
 					cout<<setw(5)<<ligas.at(i)->getNombre();
 					for(int j = 0; j < ligas.at(i)->getEquipos().size();j++){
 						cout<<j+1;
 						cout<<setw(5);
-						cout<<ligas.at(i)->getEquipos()->getNombre();
+						cout<<ligas.at(i)->getEquipos().at(j)->getNombre();
 						cout<<setw(10);
-						cout<<ligas.at(i)->getEquipos()->getPartidosjugados();
+						cout<<ligas.at(i)->getEquipos().at(j)->getPartidosjugados();
 						cout<<setw(5);
-						cout<<ligas.at(i)->getEquipos()->getPartidosganados();
+						cout<<ligas.at(i)->getEquipos().at(j)->getPartidosganados();
 						cout<<setw(5);
-						cout<<ligas.at(i)->getEquipos()->getPartidosempatados();
+						cout<<ligas.at(i)->getEquipos().at(j)->getPartidosempatados();
 						cout<<setw(5);
-						cout<<ligas.at(i)->getEquipos()->getPartidosperdidos();
+						cout<<ligas.at(i)->getEquipos().at(j)->getPartidosperdidos();
 						cout<<setw(5);
-						cout<<ligas.at(i)->getEquipos()->getGolesfavor();
+						cout<<ligas.at(i)->getEquipos().at(j)->getGolesfavor();
 						cout<<setw(5);
-						cout<<ligas.at(i)->getEquipos()->getGolescontra();
+						cout<<ligas.at(i)->getEquipos().at(j)->getGolescontra();
 						cout<<setw(5);
-						cout<<ligas.at(i)->getEquipos()->getDiferenciagoles();
+						cout<<ligas.at(i)->getEquipos().at(j)->getDiferenciagoles();
 						cout<<setw(5);
-						cout<<ligas.at(i)->getEquipos()->getPuntos(); 
+						cout<<ligas.at(i)->getEquipos().at(j)->getPuntos(); 
 					}
-				}*/
+				}
 				break;
 			}//fin case 7
 		}	

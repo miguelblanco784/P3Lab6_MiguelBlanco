@@ -25,13 +25,49 @@ int main(){
 						break;
 					}
 					case 2:{
-						
+						string nombre, pais;
+						for(int i = 0; i < ligas.size();i++){
+							cout<<i<<"   "<<ligas.at(i)->getNombre();
+						}
+						cout<<"Ingrese la liga";
+						int posicion;
+						cin>>posicion;
+						ligas.erase(ligas.begin()+posicion);
 						break;
 					}
 				}
 				break;
 			}//fin case 1
 			case 2:{
+				system("cls");
+				if(ligas.size()>0){
+					for(int i = 0; i < ligas.size();i++){
+						cout<<i<<"   "<<ligas.at(i)->getNombre();
+					}
+					int opcion2;
+					cout<<"Ingrese su liga";
+					cin>>opcion2;
+					int opcion3;
+					cout<<"1- Agregar\n2- Eliminar";
+					cin>>opcion3;
+					switch(opcion3){
+						case 1:{
+							string nombre, anofundacion;
+							cout<<"Ingrese nombre: ";
+							cin>>nombre;
+							cout<<"Ingrese ano fundacion: ";
+							cin>>anofundacion;
+							ligas.at(opcion2)->setEquipo(new Equipo(nombre, anofundacion));
+							break;
+						}
+						case 2:{
+							
+							break;
+						}
+					}
+				}
+				
+				
 				
 				break;
 			}//fin case 2

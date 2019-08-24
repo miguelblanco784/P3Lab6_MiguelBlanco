@@ -61,7 +61,9 @@ int main(){
 							break;
 						}
 						case 2:{
-							
+							for(int i = 0; i < ligas.at(opcion2)->getEquipos().size();i++){
+								ligas.at(opcion2)->getEquipos().at(i)->getNombre();
+							}
 							break;
 						}
 					}
